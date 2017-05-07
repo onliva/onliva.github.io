@@ -254,7 +254,7 @@ body {
 		}
 		40% {
 			-webkit-transform: translateY(-10px) translateX(-50%);
-			transform: translateY(-10px) translateX(-50%,0%);
+			transform: translateY(-10px) translateX(-50%);
 		}
 		60% {
 			-webkit-transform: translateY(-5px) translateX(-50%);
