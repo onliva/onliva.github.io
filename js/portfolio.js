@@ -3,10 +3,11 @@ $(function(){
 	// scroll to #start
 	var pos = $("#start").offset().top;
 	// console.log("pos:"+pos);
+
 	$(".toStart").click(function(){
 		$("body").animate({scrollTop: pos},800);
 	})
-
+	
 	// hide intro
 	$(window).scroll(function(){
 		if ($(window).scrollTop() > pos/3) {
@@ -50,7 +51,7 @@ $(function(){
 		}
 		else {
 			$('#start').removeClass('nav-fixed').next().css('padding-top','0');
-			$(".social").css({'border':'1px solid rgba(128, 128, 128, 0.6','padding-top':'4px'})
+			$(".social").css({'border-left':'1px solid rgba(128, 128, 128, 0.6','padding-top':'4px'})
 		}
 	});
 
