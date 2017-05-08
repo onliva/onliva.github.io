@@ -45,7 +45,7 @@ $(function(){
 			$(".social").css({'border':'none','padding-top':'5px'})
 		}
 		else if($(window).scrollTop() > pos) {
-			$('#start').addClass('nav-fixed').css('top','0').next().css('padding-top','60px');
+			$('#start').addClass('nav-fixed').css('top','0').next().css('padding-top','50px');
 			$(".social").css({'border':'none','padding-top':'5px'})
 		}
 		else {
