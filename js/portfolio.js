@@ -5,9 +5,25 @@ $(function(){
 	// console.log("pos:"+pos);
 
 	$(".toStart").click(function(){
-		$("body").animate({scrollTop: pos},800);
+		$("body,html").animate({scrollTop: pos},800);
 	})
-	
+	//scroll to top
+	if($(".btn-top").length > 0){
+		$(window).scroll(function () {
+			var e = $(window).scrollTop();
+			if (e > 300) {
+				$(".btn-top").show()
+			} else {
+				$(".btn-top").hide()
+			}
+		});
+		$(".btn-top").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			})
+		})
+	}
+
 	// hide intro
 	$(window).scroll(function(){
 		if ($(window).scrollTop() > pos/3) {

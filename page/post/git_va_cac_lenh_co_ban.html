@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>git và các lệnh cơ bản</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="../../js/jquery-3.1.1.js" ></script>
+	<script src="../../js/portfolio.js" ></script>
+
+</head>
+<body>
+	
+
+	<div class="main">
+		<div class="overlay"></div>
+		<nav class="nav" id="start">
+			<div class="nav-content row">
+				<div href="#" class="btn left show-mobile bars"><i class="fa fa-bars" style="color: white"></i></div>
+				<div class="left hide-mobile" >
+					<a href="../../index.html" class="link">Home</a>
+					<a href="../CV.html" class="link">Giới thiệu bản thân</a>
+					<a href="../misc.html" class="link">Linh tinh</a>
+				</div>
+			</div>
+			<div class="nav-mobile">
+				<center><a href="../../index.html" class="link">Home</a></center>
+				<center><a href="../CV.html" class="link">Giới thiệu bản thân</a></center>
+				<center><a href="../misc.html" class="link">Linh tinh</a></center>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div class="row">
+				<!-- =============== -->
+
+				<div class=" card-content">
+					<div class="card">
+						<div class="card-block">
+							<h4 class="card-title"><a href="page/git_va_cac_lenh_co_ban.html" title="">Sử dụng git và các lệnh git cơ bản</a><div class="timeline right"><sup>8:10 PM 3-May-2017</sup></div></h4>
+							<hr>
+							<div class="card-text">
+
+								<b>1. git init</b> <br>
+								<p>
+									Công dụng: Tạo một repository mới <br>
+									Để tạo 1 repository mới, bạn hãy mở cửa sổ lệnh và gõ dòng lệnh sau <br>
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git init </pre>
+								</div>
+								<b>2. git clone</b> <br>
+								<p>
+									Công dụng: Sao chép (clone) một repository
+
+									Để clone 1 repository có sẵn ở trên máy cục bộ, bạn hãy sử dụng dòng lệnh sau:
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git clone /đường-dẫn-đến/repository/ </pre>
+								</div>
+
+								<p>Nếu repository đó ở máy chủ khác thì bạn hãy gõ dòng lệnh sau:</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git clone tênusername@địachỉmáychủ:/đường-dẫn-đến/repository </pre>
+								</div>
+
+								<b>3. git branch</b> <br>
+								<p>
+									Công dụng: Kiểm tra nhánh hiện tại <br>
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git branch </pre>
+								</div>
+								<p>
+									Công dụng: Tạo nhánh mới <br>
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git branch &lt;Tên nhánh&gt; </pre>
+								</div>
+								<p>
+									Công dụng: Xóa một nhánh <br>
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git branch -d <Tên nhánh> </pre>
+								</div>
+								<b>4. git checkout</b> <br>
+								<p>
+									Công dụng: Chuyển nhánh <br>
+									Các nhánh (branches) được dùng để phát triển tính năng tách riêng ra từ những nhánh khác. Nhánh master là nhánh "mặc định" khi bạn tạo một repository. Sử dụng các nhánh khác tri đang trong giai đoạn phát triển và merge trở lại nhánh master một khi đã hoàn tất.
+									Cú pháp
+								</p>
+								
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git checkout &lt;Tên nhánh&gt; </pre>
+								</div>
+								<p>
+									Tạo một nhánh mới và đặt tên là "feature_x" và chuyển qua nhánh đó (từ master) bằng cách
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git checkout -b feature_x </pre>
+								</div>
+								<p>Trở lại nhánh master</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git checkout master </pre>
+								</div>
+								<b>5. git add</b> <br>
+
+								<p>
+									Công dụng: Cập nhật tình trạng các file( thêm, xóa, sửa) trong project được quản lý bởi GIT <br>
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> #Cập nhật tất cả <br> git add .<br> #Cập nhật tất cả các file có dạng <br> git add *.&lt;tên đuôi&gt; <br> #Cập nhật file theo tên <br> git add &lt;tên file 1&gt; [&lt;tên file 2&gt; ... &lt;Tên file n&gt;]</pre></div>
+								<b>6. git commit</b> <br>
+								<p>
+									Công dụng: Xác nhận và lưu những thay đổi của project <br>
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git commit -am "&lt;Ghi chú&gt;"</pre>
+								</div>
+								<b>7. git push</b> <br>
+
+								<p>
+									Công dụng: Cập nhật những thay đổi của project và gửi lên server <br>
+
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git push origin &lt;Tên nhánh&gt; </pre>
+								</div>
+								<p>
+									Nếu bạn chưa clone một repository hiện có và muốn kết nối repository của bạn đến máy chủ remote, bạn phải thêm nó với
+								</p>			
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git branch </pre>
+								</div>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git remote add origin &lt;máy-chủ&gt; </pre>
+								</div>
+								<p>
+									Bây giờ bạn đã có thể đẩy các thay đổi của mình vào máy chủ đã chọn
+
+								</p>
+								<br><br>
+								<b>8. git fetch</b> <br>
+
+								<p>
+									Công dụng: Lấy source mới nhất trên server về đè lên source hiện tại trên máy local <br>
+
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git fetch &lt;Tên nhánh&gt; </pre>
+								</div>
+
+								<b>9. git pull</b> <br>
+
+								<p>
+									Công dụng: Lấy source mới nhất trên server về và tiến hành trộn <br>
+
+									Cú pháp
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git pull &lt;Tên nhánh&gt; </pre>
+								</div>
+								<b>10. git tag</b> <br>
+
+								<p>
+									Công dụng: Gắn nhãn (tagging) <br>
+
+									Người ta khuyên nên tạo nhãn (tags) khi phát hành phần mềm. Đây là khái niệm được biết đến, đã từng có trên SVN. Bạn tạo tag mới tên là 1.0.0 bằng cách
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git tag 1.0.0 1b2e1d63ff </pre>
+								</div>
+								<p>
+									Chuỗi 1b2e1d63ff là 10 ký tự đầu tiên của mã commit (commit id) mà bạn muốn tham chiếu đến bằng nhãn của bạn. Bạn có thể lấy mã commit với lệnh
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git log </pre>
+								</div>
+								<p>
+									Bạn cũng có thể sử dụng ít ký tự hơn từ mã commit, nó chỉ cần phải là duy nhất.
+
+								</p>
+								<br>
+								<br>
+								<b>11. Các gợi ý hữu ích</b> <br>
+								<p>
+									GIT GUI tích hợp sẵn
+
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> gitk </pre>
+								</div>
+								<p>
+									Sử dụng kết quả git với nhiều màu
+
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git config color.ui true </pre>
+								</div>
+								<p>
+									hiện log trên chỉ một dùng mỗi commit
+
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git config format.pretty oneline </pre>
+								</div>
+								<p>
+									Sử dụng thêm tập tin tương tác
+
+								</p>
+								<div class="code-container">
+									Mã:
+									<pre class="code-code"> git add -i </pre>
+
+								</div>
+
+
+								<!-- ===========-->
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<!--================== -->
+
+
+			</div>
+		</div>
+
+		<footer>
+			<div class="content">
+
+			</div>
+			<div class="end ">
+				<h6> </h6>
+			</div>
+		</footer>
+
+	</div>
+
+</body>
+</html>
