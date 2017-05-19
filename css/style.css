@@ -323,7 +323,7 @@ hr {
     }
 }
 
-.row {
+.row:after {
     content: "";
     display: table;
     clear: both;
@@ -373,8 +373,18 @@ footer .end {
     margin-top: 5px;
     display: block;
 }
+ pre {
+    overflow: auto;
+    white-space: pre;
+   
 
-.code-container pre.code-code,
+    border: 3px solid red;
+    border-radius: 2px;
+    background: gray;
+    padding: 6px;
+    border-radius: 2px;
+}
+/* .code-container pre.code-code,
 .code-code {
     margin: 0;
     padding: 6px;
@@ -384,7 +394,7 @@ footer .end {
     white-space: pre-wrap;
     background: #f2f6f8;
     font-size: 10pt;
-}
+} */
 
 .btn-top {
     bottom: 20px;

@@ -1,9 +1,1 @@
-  wc    đếm số dòng, số kí tự… trong tập tin
-touch    tạo một tập tin.
-  cat    xem nội dung tập tin.
-  more  xem nội dung tập tin theo trang.
-   less  xem nội dung tập tin theo dòng.
-  tail  xem nội dung tập tin (mặc định xem 10 dòng cuối).
-   head  xem nội dung tập tin (mặc định xem 10 dòng đầu).
-   vi    khởi động trình soạn thảo văn bản vi.
-   man    Xem hướng dẫn thực hiện các lệnh
+some text
