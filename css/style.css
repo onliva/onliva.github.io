@@ -240,7 +240,7 @@ a {
 }
 
 .card-text {
-    padding: 20px;
+    margin-right: 20px;
     line-height: 2em;
     width: 100%;
 }
@@ -263,6 +263,7 @@ a {
 
 hr {
     border-top: 1px solid lightgrey;
+    width: 95%;
 }
 
 .timeline {
@@ -374,7 +375,7 @@ footer .end {
     display: block;
 }
 
-.code-container pre.code-code,
+.code-container pre.code-code,pre,
 .code-code {
     margin: 0;
     padding: 6px;
@@ -383,6 +384,7 @@ footer .end {
     overflow: auto;
     background: #f2f6f8;
     font-size: 10pt;
+    width: 95%;
 }
 
 .btn-top {
