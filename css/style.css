@@ -381,7 +381,6 @@ footer .end {
     border: 1px solid #D1D1E8;
     border-radius: 2px;
     overflow: auto;
-    white-space: pre-wrap;
     background: #f2f6f8;
     font-size: 10pt;
 }
