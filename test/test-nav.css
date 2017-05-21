@@ -1,0 +1,78 @@
+* {
+  box-shadow: border-box;
+}
+
+body {
+  padding: 0;
+  background: gray;
+  margin: 0;
+  height: 1000px;
+}
+
+.navbar {
+  background: black;
+  font-family: arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar .nav-title {
+  color: white;
+  display: inline-block;
+  padding: 11px;
+}
+
+.navbar .nav-item {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar .nav-item a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.navbar .nav-item :hover {
+  text-shadow: 0 0 3px white;
+}
+
+.navbar .nav-item-right {
+  float: right;
+}
+
+.navbar .nav-dropdown {
+  display: inline-block;
+}
+
+.navbar .nav-dropdown .nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  max-width: 300px;
+  background: black;
+  border-top: white;
+}
+
+.navbar .nav-dropdown .nav-dropdown-menu .dropdown-item a {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .nav-dropdown .nav-dropdown-menu .dropdown-item a :hover {
+  color: red;
+  text-shadow: 0 0 3px white;
+}
+
+.navbar .nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+/*# sourceMappingURL=test-nav.css.map */
