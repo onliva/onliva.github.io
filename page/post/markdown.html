@@ -57,7 +57,7 @@
 								<center><img src="http://blog.ghost.org/content/images/2015/03/markdown-guide-1.jpg" alt="markdown"></center>
 
 
-								<center>Hình ảnh lấy từ http://blog.ghost.org/markdown/</center> 
+								<center class="responsive">Hình ảnh lấy từ http://blog.ghost.org/markdown/</center> 
 
 								<b>Markdown</b>- chuẩn viết tài liệu kỹ thuật của giới phát triển phần mềm. Dùng <b>Markdown</b> bạn sẽ viết được những nội dung phong phú với công sức bỏ ra là ít nhất, tiếng Nhật gọi là サクサク (saku-saku) - viết ra cứ rào rào như kiểu "thái mấy nhát rau" hay "cắn vài nhát thịt".  <br><br>
 
@@ -178,32 +178,34 @@ os.system('clear')
 	| col 2 is      |    centered   |      $12|
 	| zebra stripes |    are neat   |       $1| </pre>
 								Ở dòng ngăn cách giữa header và content bạn sẽ thấy ký hiệu căn lề trái phải (cột 2 và cột 3) bằng dấu :. Bảng trên sẽ được render thành cấu trúc HTML như dưới đây.
-								<table>
-									<thead>
-										<tr>
-											<th>Tables</th>
-											<th>Are</th>
-											<th>Cool</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr >
-											<td >col 3 is</td>
-											<td style="text-align: center;">right-aligned</td>
-											<td style="text-align: right;">$1600</td>
-										</tr>
-										<tr >
-											<td>col 2 is</td>
-											<td style="text-align: center;">centered</td>
-											<td style="text-align: right;">12$</td>
-										</tr>
-										<tr>
-											<td>zebra stripes</td>
-											<td style="text-align: center;">are neat</td>
-											<td style="text-align: right;">$1</td>
-										</tr>
-									</tbody>
-								</table>
+								<div class="responsive">
+									<table>
+										<thead>
+											<tr>
+												<th>Tables</th>
+												<th>Are</th>
+												<th>Cool</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr >
+												<td >col 3 is</td>
+												<td style="text-align: center;">right-aligned</td>
+												<td style="text-align: right;">$1600</td>
+											</tr>
+											<tr >
+												<td>col 2 is</td>
+												<td style="text-align: center;">centered</td>
+												<td style="text-align: right;">12$</td>
+											</tr>
+											<tr>
+												<td>zebra stripes</td>
+												<td style="text-align: center;">are neat</td>
+												<td style="text-align: right;">$1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 								
 								<!--================== -->
 
