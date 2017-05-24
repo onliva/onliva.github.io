@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tạo nút về đầu trang</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="../../js/jquery-3.1.1.js" ></script>
+	<script src="../../js/portfolio.js" ></script>
+
+</head>
+<body>
+	
+	<div class="btn-top"><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></div>
+	<div class="main">
+		<div class="overlay"></div>
+		<nav class="nav" id="start">
+			<div class="nav-content row">
+				<div href="#" class="btn left show-mobile bars"><i class="fa fa-bars" style="color: white"></i></div>
+				<div class="left hide-mobile" >
+					<a href="../../index.html" class="link">Home</a>
+					<a href="../CV.html" class="link">Giới thiệu bản thân</a>
+					<a href="../misc.html" class="link">Linh tinh</a>
+				</div>
+			</div>
+			<div class="nav-mobile">
+				<center><a href="../../index.html" class="link">Home</a></center>
+				<center><a href="../CV.html" class="link">Giới thiệu bản thân</a></center>
+				<center><a href="../misc.html" class="link">Linh tinh</a></center>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div class="row">
+				<!-- =============== -->
+
+				<div class=" card-content">
+					<div class="card">
+						<div class="card-block">
+							<h4 class="card-title"><a href="page/git_va_cac_lenh_co_ban.html" title="">Cách tạo nút về đầu trang</a><div class="timeline right"><sup>0:10 AM 2-May-2017</sup></div></h4>
+							<hr>
+							<div class="card-text">
+								<!-- ================================== -->
+								<div>
+									<p>Bài viết này hướng dẫn các bạn tạo nút 'Lên đầu trang' hay còn gọi là Back to Top hay Scroll to Top. Mục đích giúp người duyệt web có thể di chuyển nhanh về đầu trang web.</p>
+
+									<p>Chức năng chính của thủ thuật này chính là tạo ra một nút mũi tên lên, nằm ở góc dưới bên phải màn hình. Mục đích giúp người duyệt web di chuyển nhanh về đầu trang. Ví dụ như trang <a href="http://ngoisao.net" target="_blank">ngoisao.net</a> các bạn có thể xem ở hình sau:</p>
+
+									<p style="text-align:center"><img alt="demo.png" src="../../img/demo.png"/></p>
+
+									<p>Hôm nay tôi xin hướng dẫn các bạn làm một nút giống y như thế.</p>
+
+									<p>Có nhiều cách để thực hiện điều này, nhưng ở đây chúng ta làm với Jquery và CSS để tạo hiệu ứng chạy mượt mà (có cảm giác như có đang chạy lên chứ không phải nhảy về đầu trang).</p>
+
+									<p>Cách làm như sau:</p>
+
+									<blockquote>
+										<p>Chú ý: Chúng ta có các file như sau: <kbd >btn_top.css</kbd>, <kbd>btn_top.js</kbd>, <kbd >btn_top.png</kbd>, <kbd >btn_top.html</kbd></p>
+									</blockquote>
+
+									<p>&nbsp;</p>
+
+									<p><strong>Bước 1: </strong>Tạo file <kbd>btn_top.css</kbd> như sau</p>
+<div class="code-container">
+	<pre class="code-code">
+.btn-top {
+	background-image: url(../img/btn_top.png);
+	background-repeat: no-repeat;
+	border: medium none;
+	bottom: 20px;
+	cursor: pointer;
+	display: none;
+	height: 50px;
+	outline: medium none;
+	padding: 0;
+	position: fixed;
+	right: 20px;
+	idth: 50px;
+	z-index: 9999;
+}
+	</pre>
+</div>
+
+										<p>&nbsp;</p>
+
+										<p><strong>Bước 2</strong>: Tạo file <kbd>btn_top.js</kbd> như sau:</p>
+<div class="code-container">
+	<pre class="code-code" >
+jQuery(document).ready(function($){ 
+	if($(".btn-top").length &gt; 0){
+		$(window).scroll(function () {
+			var e = $(window).scrollTop();
+			if (e &gt; 300) {
+				$(".btn-top").show()
+			} else {
+			$(".btn-top").hide()
+			}
+		});
+		$(".btn-top").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			})
+		})
+	}		
+});
+		</pre>
+</div>
+
+			<p>&nbsp;</p>
+
+			<p><strong>Bước 3</strong>: Tạo file <kbd>btn_top.html</kbd> như sau:</p>
+
+			<div class="code-container" class="code-container">
+				<pre class="code-code" >
+&lt;!DOCTYPE &gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;DEMO BACK TO TOP&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-1.11.3.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/btn_top.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="css/btn_top.css" &gt;
+&lt;/head&gt;
+&lt;body&gt;	
+&lt;div class="footer"&gt; &lt;a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"&gt;&lt;/a&gt; &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+				</pre></div>
+
+				<blockquote>
+					<p>Chú ý: Các bạn nhớ chèn thêm 1 file  <kbd>jquery-1.11.3.js</kbd> vào nhé.</p>
+				</blockquote>
+
+				<p>Chúc các bạn thành công !!!</p>
+
+				<p>&nbsp;</p>
+
+
+				<!-- ===========-->
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!--================== -->
+
+
+</div>
+</div>
+</div>
+<footer>
+	<div class="content">
+
+	</div>
+	<div class="end ">
+		<h6></h6>
+	</div>
+</footer>
+
+
+
+</body>
+</html>

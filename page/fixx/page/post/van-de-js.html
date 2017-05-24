@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Một vài vấn đề cần lưu ý về javascript</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="../../js/jquery-3.1.1.js" ></script>
+	<script src="../../js/portfolio.js" ></script>
+
+</head>
+<body>
+	
+	<div class="btn-top"><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></div>
+	<div class="main">
+		<div class="overlay"></div>
+		<nav class="nav" id="start">
+			<div class="nav-content row">
+				<div href="#" class="btn left show-mobile bars"><i class="fa fa-bars" style="color: white"></i></div>
+				<div class="left hide-mobile" >
+					<a href="../../index.html" class="link">Home</a>
+					<a href="../CV.html" class="link">Giới thiệu bản thân</a>
+					<a href="../misc.html" class="link">Linh tinh</a>
+				</div>
+			</div>
+			<div class="nav-mobile">
+				<center><a href="../../index.html" class="link">Home</a></center>
+				<center><a href="../CV.html" class="link">Giới thiệu bản thân</a></center>
+				<center><a href="../misc.html" class="link">Linh tinh</a></center>
+			</div>
+		</nav>
+		<!-- =============== -->
+		<div class="content">
+			<div class="row">
+					<div class=" card-content">
+					<div class="card">
+						<div class="card-block">
+							<h4 class="card-title"><a href="#" title="">Một vài vấn đề cần lưu ý về javascript</a><div class="timeline right"><sup>8:10 PM 20-May-2017</sup></div></h4>
+							<hr>
+							<div class="card-text">
+
+								<h3>#1: Event Delegation</h3> <br>
+								<p>
+									Khi xây dựng ứng dụng, thỉnh thoảng bạn cần gán các event listener vào các button, đoạn text, hay hình ảnh trong 1 trang web để biểu diễn 1 hành động nào đó khi người dùng tương tác với các thành phần trên trang. <br>
+								</p>
+								<p>
+									Lấy ví dụ với đoạn code của ứng dụng todo-list dưới đây. Người phỏng vấn sẽ muốn 1 hành động xảy ra khi người dùng click vào 1 trong những công việc trong danh sách. họ cũng muốn bạn thực thi tính năng này trong JavaScript:
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+&lt;ul id="todo-app"&gt;
+  &lt;li class="item"&gt;Walk the dog&lt;/li&gt;
+  &lt;li class="item"&gt;Pay bills&lt;/li&gt;
+  &lt;li class="item"&gt;Make dinner&lt;/li&gt;
+  &lt;li class="item"&gt;Code for one hour&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+								</div>
+								<p>
+									Bạn có thể viết code như đoạn code dưới đây để gán các event listener vào các element:
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+document.addEventListener('DOMContentLoaded', function() {
+  
+  let app = document.getElementById('todo-app');
+  let items = app.getElementsByClassName('item');
+  
+  // attach event listener to each item
+  for (let item of items) {
+    item.addEventListener('click', function() {
+      alert('you clicked on item: ' + item.innerHTML);
+    });
+  }
+  
+});
+</pre>
+								</div>
+								<p>
+									Mặc dù đoạn code hoàn toàn đúng, tuy nhiên vấn đề chính là bạn đã phải gán từng event listener vào từng element riêng lẻ. Với số lượng element nhỏ, điều này là chấp nhận được. Tuy nhiên với số lượng element lớn, hàm bạn viết sẽ cần số lượng event listener tương đương và gán từng cái vào DOM. Rõ ràng công việc này không hiệu quả 1 chút nào.
+								</p>
+								<p>
+									Vì lẽ đó, trong buổi phỏng vấn, điều mà bạn nên làm trước tiên chính là hỏi lại người phỏng vấn số lượng element tối đa. Nếu nó không quá 10, đoạn code trên sẽ chạy rất ổn. Tuy nhiên nếu không có giới hạn về số lượng element thì bạn cần cân nhắc về những lựa chọn tối ưu hơn.
+								</p>
+								<p>
+									Trong trường hợp đó, lý tưởng nhất chính là gán một event listener cho cả container, cho phép nó truy cập vào từng item trong container khi được click. Giải pháp này được gọi là Event Delegation, rõ ràng nó hiệu quả hơn hẳn việc gán từng event listener một.
+								</p>
+								<p>
+									Dưới đây là code mẫu:
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+document.addEventListener('DOMContentLoaded', function() {
+  
+  let app = document.getElementById('todo-app');
+  
+  // attach event listener to whole container
+  app.addEventListener('click', function(e) {
+    if (e.target && e.target.nodeName === 'LI') {
+      let item = e.target;
+      alert('you clicked on item: ' + item.innerHTML);
+    }
+  });
+  
+});
+</pre>
+								</div>
+								<br>
+								<h3>#2: Sử dụng closure bên trong 1 vòng lặp</h3>
+								<hr>
+								<p>
+									Closure là 1 chủ đề thường thấy trong các buổi phỏng vấn về JavaScript, nó giúp người phỏng vấn đánh giá bạn thành thục ngôn ngữ đến đâu, bạn biết implement closure hay không.
+								</p>
+								<p>
+									Về cơ bản, closure là 1 hàm nội truy cập đến các biến bên ngoài phạm vi của nó. Closure có thể được sử dụng để implement privacy và tạo ra các function factory. Một câu hỏi phỏng vấn thường thấy về việc sử dụng closure sẽ có kiểu thế này:
+								</p>
+								<p>
+									<i>Viết 1 function lặp qua 1 danh sách các số dạng integer và in ra index của mỗi giá trị sau thời gian chờ 3s.</i>
+								</p>
+								<p>
+									Dưới đây là cách tôi hay thấy khi mọi người giải quyết bài toán này (thực ra là sai):
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log('The index of this number is: ' + i);
+  }, 3000);
+}
+</pre>
+								</div>
+								<p>
+									Nếu bạn chạy đoạn code trên, output bạn nhận được sẽ luôn là 4, mặc dù ta mong rằng output sẽ phải là 0, 1, 2, 3 sau mỗi 3s.
+								</p>
+								<p>
+									Tại sao lại như thế? Để hiểu rõ lý do, đương nhiên bạn cần nắm vững kiến thức về closure của JavaScript, bởi vì người phỏng vấn đang kiểm tra bạn về nó cơ mà!
+								</p>
+								<p>
+									Lý do là bởi vì hàm <kbd>setTimeout</kbd> sẽ tạo ra 1 function (closure) có thể truy cập phạm vi bên ngoài nó, vòng loop sẽ chứa index <kbd>i</kbd>. Sau 3s, hàm được thực thi và nó sẽ log ra giá trị của <kbd>i</kbd>, là giá trị cuối cùng của vòng lặp (<b>4</b>).
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+const arr = [10, 12, 15, 21];
+for (var i = 0; i < arr.length; i++) {
+  // pass in the variable i so that each function 
+  // has access to the correct index
+  setTimeout(function(i_local) {
+    return function() {
+      console.log('The index of this number is: ' + i_local);
+    }
+  }(i), 3000);
+}
+</pre>
+								</div>
+								<br>
+								<div class="code-container">
+<pre class="code-code">
+const arr = [10, 12, 15, 21];
+for (let i = 0; i < arr.length; i++) {
+  // using the ES6 let syntax, it creates a new binding
+  // every single time the function is called
+  // read more here: http://exploringjs.com/es6/ch_variables.html#sec_let-const-loop-heads
+  setTimeout(function() {
+    console.log('The index of this number is: ' + i);
+  }, 3000);
+}
+</pre>
+								</div>
+								<br>
+								<h3>#3: Debouncing</h3>
+								<hr>
+								<p>
+									Một số sự kiện xảy ra trên trình duyệt có thể xảy ra nhiều lần trong 1 khoảng thời gian ngắn, như là thay đổi kích thước cửa sổ hay cuộn chuột xuống. Nếu bạn gán 1 event listener với sự kiện cuộn chuột đề cập phía trên, và người sử dụng tiếp tục cuộn chuột xuống rất nhanh, event có thể sẽ xảy ra cả ngàn lần chỉ trong vòng khoảng 3s. Điều này sẽ gây ra 1 số vấn đề về hiệu năng khá nghiêm trọng.
+								</p>
+								<p>
+									Nếu bạn có dự định sẽ thảo luận trong buổi phỏng vấn về việc xây dựng 1 ứng dụng, các sự kiện như cuộn, thay đổi kích thước cửa sổ, hay là nhấn phím,... hãy chắc rằng bạn có đề cập đến debouncing và/hoặc throttling như là phương án để cải thiện tốc độ cũng như hiệu năng trang web. Đây là 1 ví dụ thực tế từ bài viết css trick:
+								</p>
+								<blockquote>
+									<p>Vào năm 2011, 1 vấn đề đã xuất hiện trên trang web Twitter: khi bạn cuộn chuột xuống để đọc các feed Twitter, nó ngày càng trở nên chậm và unresponsive. John Resig đã viết 1 bài post blog về vấn đề này để giải thích rằng ý tưởng gán trực tiếp hàm vào sự kiện scroll là tồi tệ đến mức nào.</p>
+								</blockquote>
+								<p>
+									Debouncing là cách để giải quyết vấn đề này với ý tưởng giới hạn thời gian cần để thực thi cho đến khi 1 hàm được gọi lại. Sử dụng debouncing đúng cách sẽ gói các hàm vào 1 hàm, và thực thi nó đúng 1 lần duy nhất. Dưới đây là 1 cách thực thi trong JavaScript, bao hàm cả các vấn đề như scope, closure, this, timing event:
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+// debounce function that will wrap our event
+function debounce(fn, delay) {
+  // maintain a timer
+  let timer = null;
+  // closure function that has access to timer
+  return function() {
+    // get the scope and parameters of the function 
+    // via 'this' and 'arguments'
+    let context = this;
+    let args = arguments;
+    // if event is called, clear the timer and start over
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      fn.apply(context, args);
+    }, delay);
+  }
+}
+</pre>
+								</div>
+								<p>
+									Hàm này - khi wrap 1 event - sẽ thực thi chỉ khi thời gian set đã trôi qua.
+								</p>
+								<div class="code-container">
+<pre class="code-code">
+// function to be called when user scrolls
+function foo() {
+  console.log('You are scrolling!');
+}
+
+// wrap our function in a debounce to fire once 2 seconds have gone by
+let elem = document.getElementById('container');
+elem.addEventListener('scroll', debounce(foo, 2000));
+</pre>
+								</div>
+								<p>
+									Throttling là 1 kĩ thuật khác tương tự debouncing, ngoại trừ việc không chờ 1 khoảng thời gian rồi mới gọi hàm. Thay vào đó, nó chỉ kéo dài lời gọi hàm qua khoảng thời gian dài hơn. Do đó nếu có 1 event xảy ra 10 lần trong vòng 100 mili giây, throttling sẽ kéo dài từng lời gọi hàm để thực thi mỗi 2s thay vì tất cả trong 100 mili giây.
+								</p>
+								<p>
+									Để biết thêm về debouncing và throttling, hãy tìm hiểu thêm các bài viết và tutorial dưới đây:
+								</p>
+								<ul class = "source">
+									<li>
+										<a href="https://medium.com/@_jh3y/throttling-and-debouncing-in-javascript-b01cad5c8edf#.ly8uqz8v4" title="">Throttling and Debouncing in JavaScript</a>
+									</li>
+									<li>
+										<a href="https://css-tricks.com/the-difference-between-throttling-and-debouncing/" title="">A difference between Throttling and Debouncing</a>
+									</li>
+									<li>
+										<a href="https://css-tricks.com/debouncing-throttling-explained-examples/" title="">Examples of Throttling and Debouncing</a>
+									</li>
+									<li>
+										<a href="https://remysharp.com/2010/07/21/throttling-function-calls" title="">Remy Sharp's blog post on Throttling function calls</a>
+									</li>
+								</ul>
+								
+								<p class="right">
+									Nguồn: techmaster.vn
+								</p>
+								<br>
+								
+
+
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================== -->			
+		<footer>
+			<div class="content">
+
+			</div>
+			<div class="end ">
+				<h6> </h6>
+			</div>
+		</footer>
+
+	
+
+</body>
+</html>

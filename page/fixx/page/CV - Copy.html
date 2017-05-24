@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset ="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>About</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		html{
+			-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		body{margin:0}
+		article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+		audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+		audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+		a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+		dfn{font-style:italic}mark{background:#ff0;color:#000}
+		small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+		sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}svg:not(:root){overflow:hidden}
+		pre {font-family:monospace,monospace;font-size:1em;}
+		kbd {
+			font-family:monospace,monospace;
+			font-size:1em;
+			background: lightgray;
+			color: red;
+			padding: 3px;
+			border-radius: 3px;
+		}
+		code,samp{font-family:monospace,monospace;font-size:1em;}
+		hr{box-sizing:content-box;height:0;overflow:visible;}
+		button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
+		button,input{overflow:visible}button,select{text-transform:none}
+		button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+		button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
+		button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+		fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+		legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+		[type=checkbox],[type=radio]{padding:0}
+		[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+		[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+		[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+		::-webkit-input-placeholder{color:inherit;opacity:0.54}
+		::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+		html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+		h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.w3-serif{font-family:serif}
+		h1,h2,h3,h4,h5,h6{font-family: 'Roboto Slab', serif;font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+		hr{border:0;border-top:1px solid #eee;margin:20px 0}
+		
+		/* cv.css */
+		*{
+			position:relative ; 
+			box-sizing:border-box;
+			font-size: 20px;
+			font-family: 'roboto',sans-serif;
+		}
+		.content {
+			padding:0 50px;
+			margin: auto;
+		}
+		a {
+			text-decoration: none;
+		}
+		header{
+			width:100%; 
+			height: 200px;
+			box-shadow: 0 2px 10px 0 rgba(25,25,25,0.5), 0 4px 13px 0 rgba(25,25,25,0.2);
+			background:teal;
+
+		}
+
+		img{
+			position: absolute;
+			top: 50%;
+			right: 1%;
+			transform: translate(0%,-50%);
+			width:180px;   
+			height: auto;
+			border-radius: 10px; 
+		}
+		header .hd{
+			position: absolute;
+			top:50%;
+			left: 5%;
+			transform: translate(0%,-50%);
+			-webkit-transform: translate(0%,-50%);
+			font-size: 25px;
+			color: white;
+
+			display: inline-block;
+		}
+		aside{
+			float: left;
+			width:30%; 
+			margin-top: 10px;
+
+		}
+		aside .name{
+			width:30%;
+			display:inline-block;
+		}
+		aside .vl{
+			width:68%;
+			display:inline-block;
+		}
+
+		aside .skill{
+			width: 85%;
+			height: 10px;
+
+			margin-bottom: 20px;
+			background: lightgray;
+			border-radius: 5px;
+		}
+		p{
+			display: block;
+			clear:both;
+			word-wrap: break-word;
+			margin-top: 0px; 
+			text-indent: 8px;
+		}
+
+
+		aside .skill-right {
+			position: absolute;
+			width: 80%;
+			height: 10px;
+			background: teal;
+			border-radius: 5px;
+			margin: 0;
+			padding: 0;  
+			left: 0;
+		}
+		div.r1{
+			width:90%;
+		}
+		div.r2{
+			width:75%;
+		}
+		div.r3{
+			width:40%;
+		}
+		div.r4{
+			width:90%;
+		}
+		div.r5{
+			width:70%;
+		}
+		div.r6{
+			width:65%;
+		}
+		div.r7{
+			width:80%;
+		}
+
+		section{
+			float: left;
+			width:69%; 
+			margin-top:10px ;
+			margin-left:8px;
+		}
+		.box{
+			display:block; 
+			padding:14px;
+			margin: 8px 0;
+			background:white;
+			width:100%;
+			height: 100%;
+			box-shadow:0 0 5px rgba(25,25,25,0.3), 0 0 8px rgba(25,25,25,0.1) ;
+
+
+
+		}
+
+		.title{
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			left: 0;
+			background: #d1d1d1;
+			padding: 5px;
+			font-size: 20px;
+			color: teal;
+		}
+		.title >i{
+			font-size:26px!important;
+		}
+		i{
+			font-size:18px!important;
+			color: teal;
+			margin-right: 10px;
+
+		}
+		.padd-top {
+			padding-top: 35px;
+		}
+
+
+		@media only screen and (max-width:1000px){
+			aside, section {
+				width:100%;
+			}
+		}
+		@media only screen and (max-width:500px){
+			img{
+				display: none;
+			}
+			header{
+				width:100%; 
+				height: 200px;
+				box-shadow: 0 2px 10px 0 rgba(25,25,25,0.5), 0 4px 13px 0 rgba(25,25,25,0.2);
+				background-size: 100% auto;
+
+			}
+			header .hd{
+				text-shadow: 0 0 3px black;
+			}
+		}
+		footer{
+			width: 100%;
+			height: 60px;
+			clear: both;
+			background: teal;
+			box-shadow: 0 -2px 10px gray;
+			text-align: center;
+			display: table;
+
+			color: white;
+			font-size: 10px;
+		}
+		footer p {
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			font-size: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<div class="hd ">Lương Văn Thông</div>
+
+		<!-- <img src="https://www.w3schools.com/w3css/img_avatar2.png" alt="avatar" style="width: 150x;height: 150px;"/> -->
+
+	</header>
+	<div class="content">
+		<aside class="info ">
+			<div class="box">
+				<p class="title">
+					<i class="fa fa-info-circle"></i>Thông tin liên hệ
+				</p>
+
+
+				<p class="padd-top">
+					<i class="fa fa-birthday-cake"></i>
+					2-2-1994
+				</p>
+
+				<p>
+					<i class="fa fa-phone"></i>
+					0165.914.7285
+				</p>    		
+
+				<p>
+					<i  class="fa fa-envelope"></i>
+					luongthongvfu@gmail.com
+				</p>	    		
+
+				<p>
+					<i class="fa fa-home"></i>
+					Quế phong,Nghệ An
+				</p>	    		
+
+			</div> 
+
+			<div class="box">
+
+				<p class="title" >
+					<i  class="fa fa-asterisk"></i>
+					kĩ năng
+				</p>
+
+				<p class="padd-top">HTML, CSS</p>
+				<div class="skill">
+
+					<div class="skill-right r1"></div>
+				</div>
+
+				<p>JavaScript/jQuery</p>
+				<div class="skill">
+
+					<div class="skill-right r2"></div>
+				</div>
+
+				<p>PHP, SQL</p>
+				<div class="skill">
+
+					<div class="skill-right r3"></div>
+				</div>
+
+				<p>Tiếng anh</p>
+				<div class="skill">
+
+					<div class="skill-right r5"></div>
+				</div>
+
+			</div>  
+
+		</aside>
+
+
+		<section class="main">
+			<div class="box">
+				<p class="title">
+					<i class="fa fa-graduation-cap"></i>
+					Học vấn
+				</p>
+				<ul>
+					<li>
+						<p class="padd-top"> Đại học Lâm nghiệp</p>
+						<p>Chuyên ngành : quản lý tài nguyên thiên nhiên</p>
+						<p>Tốt nghiệp loại khá</p>
+					</li>	
+					<li>
+						<p>Lập trình web front-end</p>
+						<p>Hoàn thành các khóa học online từ nhiều nguồn khác nhau như:
+							<dl>
+								<dt></dt>
+								<dd>- www.w3schools.com</dd>
+								<dd>- www.codeacademy.com</dd>
+								<dd>- <a href="https://www.sololearn.com/Profile/868188/html" title="" target="_blank" style="color:black;text-decoration:none;">www.sololearn.com</a></dd>
+							</dl>
+
+						</p>
+
+					</li>
+				</ul>
+			</div>  
+
+
+			<div class="box">
+				<p class="title">
+					<i class="fa fa-flag"></i>
+					Hoạt động
+				</p>
+				<br>
+				<p class="padd-top">Có niềm đam mê, hứng thú với công nghệ, Vì vậy trong và sau khi tốt nghiệp thường xuyên tự học về lập trình,
+					đặc biệt là lập trình web. <br>
+					sản phẩm Demo xem tại: <a href="https://www.github.com/onliva" title="" target="_blank">github.com/onliva</a> và <a href="https://onliva.github.io" title="">onliva.github.io</a>
+
+				</p>
+			</div>  
+
+
+
+			<div></div>
+
+		</section>
+
+	</div>
+	<footer>
+
+
+
+	</footer>
+</body>
+</html>

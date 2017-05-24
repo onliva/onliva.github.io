@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Giới thiệu về Mark Down</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="../../js/jquery-3.1.1.js" ></script>
+	<script src="../../js/portfolio.js" ></script>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 8px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div class="btn-top"><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></div>
+	<div class="main">
+		<div class="overlay"></div>
+		<nav class="nav" id="start">
+			<div class="nav-content row">
+				<div href="#" class="btn left show-mobile bars"><i class="fa fa-bars" style="color: white"></i></div>
+				<div class="left hide-mobile" >
+					<a href="../../index.html" class="link">Home</a>
+					<a href="../CV.html" class="link">Giới thiệu bản thân</a>
+					<a href="../misc.html" class="link">Linh tinh</a>
+				</div>
+			</div>
+			<div class="nav-mobile">
+				<center><a href="../../index.html" class="link">Home</a></center>
+				<center><a href="../CV.html" class="link">Giới thiệu bản thân</a></center>
+				<center><a href="../misc.html" class="link">Linh tinh</a></center>
+			</div>
+		</nav>
+
+		<div class="content">
+			<div class="row">
+				<!-- =============== -->
+
+				<div class=" card-content">
+					<div class="card">
+						<div class="card-block">
+							<h4 class="card-title"><a href="page/git_va_cac_lenh_co_ban.html" title="">Giới thiệu về Mark Down</a><div class="timeline right"><sup>16:10 AM 15-May-2017</sup></div></h4>
+							<hr>
+							<div class="card-text">
+								<!-- ================================== -->
+								<h1>Markdown Guide</h1>
+								<br>
+								<center><img src="http://blog.ghost.org/content/images/2015/03/markdown-guide-1.jpg" alt="markdown"></center>
+
+
+								<center class="responsive">Hình ảnh lấy từ http://blog.ghost.org/markdown/</center> 
+
+								<b>Markdown</b>- chuẩn viết tài liệu kỹ thuật của giới phát triển phần mềm. Dùng <b>Markdown</b> bạn sẽ viết được những nội dung phong phú với công sức bỏ ra là ít nhất, tiếng Nhật gọi là サクサク (saku-saku) - viết ra cứ rào rào như kiểu "thái mấy nhát rau" hay "cắn vài nhát thịt".  <br><br>
+
+								Vậy <b>Markdown</b> viết dễ như thế nào?  <br>
+								Bài viết này sẽ đưa cho bạn câu trả lời đầy đủ nhất.
+								<h3>Lịch sử của Markdown</h3>
+								<hr>
+								Năm 2004, John_Gruber - một designer, blogger chuyên về các sản phẩm của Apple phát điên sau khi phải viết một tài liệu HTML dài dằng dặc. Anh nảy ra ý tưởng tạo ra một ngôn ngữ cho các tài liệu trên web mà phải dễ viết, dễ đọc ở định dạng tự nhiên và có thể chuyển thành HTML. Với sự giúp đỡ của Aaron Swartz. John_Gruber thực sự đã phát minh ra Markdown mà chúng ta biết ngày nay.<br>
+								Bạn hãy thử nhìn một ví dụ đơn giản nhé:  
+								<pre>**Markdown** quá *tuyệt* phải không nào. Cảm ơn [John_Gruber](https://en.wikipedia.org/wiki/John_Gruber).</pre>
+								Và chúng ta sẽ có :  
+								<b>Markdown</b> quá tuyệt phải không nào. Cảm ơn John_Gruber.  <br>
+
+								Ban đầu mình chẳng hiểu và cũng chẳng thích Markdown lắm đâu. Lý do ư? Mình có thể viết Word (Google Docs nếu viết online), dùng Evernote hay vô số các trình soạn thảo online/offline khác. Tuy vậy sau một vài phút mình bắt đầu phải đi tìm nút bôi đậm, in nghiêng, định dạng thành danh sách hay chèn link, chèn ảnh v.v... Đi tìm nút là đơn giản khi mới làm quen, nhưng vô cùng bất tiện khi viết một văn bản dài.<br>
+								Chuyện gì xảy ra tiếp theo? Ngao ngán, ngáp, bản chất "lười và tỏ ra ngu ngốc" trỗi dậy và bắt đầu tìm đến Markdown Flow viết trở nên nhịp nhàng hơn, tay không rời bàn phím và không phải đụng đến chuột để đi click nút nữa.
+								<h3>Ngữ pháp cơ bản của Markdown</h3>
+								<hr>
+								Tất cả cú pháp của Markdown đều rất rõ ràng và trong sáng. Nếu bạn có thể nhớ 1 lần, bạn sẽ nhớ được mãi mãi. 
+								Hãy coi bài viết này như một tài liệu tra cứu mỗi khi không nhớ ra các cú pháp của Markdown nhé!
+								<h3>Tiêu đề</h3>
+								<hr>
+
+								Các lớp tiêu đề h1,h2,h3 cho đến h6 có thể viết được bằng cách thêm số lượng ký tự # tương ứng vào đầu dòng. Một ký tự # tương đương với h1, 2 ký tự # tương đương với h2 ... Tuy vậy để viết một bài viết dễ đọc thì hiếm khi cần dùng đến quá 3 ký tự này.  
+<pre>
+# Header h1
+## Header h2
+### Header h3
+</pre>
+
+								<h3>Bôi đậm và in nghiêng</h3>
+								<hr>
+
+								Kẹp một từ ở đầu và cuối bằng 1 ký tự * để in nghiêng, 2 ký tự ** để bôi đậm, và 3 ký tự *** để vừa in nghiêng vừa bôi đậm.
+								Nếu muốn bạn có thể dùng gạch dưới _ thay cho dấu sao *.
+<pre>
+**Bold** and *italic* and ***both***. __Bold__ and _talic_ and ___both___ 
+</pre>  
+								   
+								Ngoài ra chữ có thể gạch ngang bằng 2 dấu ~~.
+								<pre>~~strike me~~</pre> 
+								<h3>Link</h3>
+								<hr>
+
+								Viết link trong markdown bằng cách cho alt text vào trong ngoặc vuông<kbd>[]</kbd> và link thật vào trong ngoặc đơn <kbd>()</kbd>. Ví dụ ở đây giống hệt ví dụ đầu tiên về John_Gruber ở đoạn trên.<br>
+
+								<pre>[John_Gruber](https://en.wikipedia.org/wiki/John_Gruber)</pre> 
+								Ngoài ra bạn có thể thêm tiêu đề cho link bằng cách thêm "title" trong mô tả bên trong ngoặc đơn ().
+								<pre>[John_Gruber](https://en.wikipedia.org/wiki/John_Gruber "Markdown Creator") </pre>
+								<h3>Hình ảnh</h3>
+								<hr>
+
+								Chèn hình ảnh trong markdown chỉ khác với chèn link đôi chút. Bạn thêm ký tự ! vào đầu tiên, sau đó ghi alt text và link ảnh vào trong ngoặc vuông <kbd>[]</kbd> và ngoặc đơn <kbd>()</kbd>.
+								<pre>![Atom](https://atom.io/assets/packages-d16d6cc46fd0cf01842409577e782b74.gif) </pre>
+	
+								<center><img src="https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/packages-0fc07ecae73a786761ada738d16ae2ff.gif" alt="Atom"></center>
+								<h3>Định dạng danh sách</h3>
+								<hr>
+
+								Để định đạng một đoạn văn bản thành các gạch đầu dòng trong markdown, bạn dùng ký tự * và một dấu cách ở mỗi ý và dùng thêm 2 dấu cách ở đằng trước nếu muốn lùi vào một level.<br>
+								<pre>* Ruby * PHP * Laravel * Symfony * Phalcon * Python * Flask  * Jinja2  * WSGI1.0  * Django </pre>
+								sẽ trở thành:
+								<ul>
+									<li>Ruby</li>
+									<li>PHP</li>
+									<li>Laravel</li>
+									<li>Symfony</li>
+									<li>Phalcon</li>
+									<li>Python</li>
+									<li>Flask</li>
+									<li>Jinja2</li>
+									<li>WSGI1.0</li>
+									<li>Django</li>
+								</ul>
+								Nếu bạn muốn dùng số để đánh dấu thì viết số và một dấu chấm .
+								<pre>1. number one 2. number two 3. number three </pre>
+								sẽ trở thành:
+								<ol>
+									<li>number one</li>
+									<li>number two</li>
+									<li>number three</li>
+								</ol>
+							
+								<h3>Trích dẫn</h3>
+								<hr>
+
+								Cách viết một trích dẫn giống hệt khi bạn vẫn trả lời bình luận hay dẫn chứng trong các diễn đàn: sử dụng ký tự <kbd>></kbd>.
+								<blockquote>
+									<p> Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning. <br>
+								Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.</p>
+								</blockquote>
+								<h2>Ngữ pháp nâng cao của Markdown</h2>
+								<hr>
+
+								Kể từ đây sẽ là các cú pháp thuộc phần nâng cao. Một số trong số này không được hỗ trợ trực tiếp bởi Markdown.
+								<h3>Mã code</h3>
+								<hr>
+
+								Có 2 loại code có thể viết trong markdown: inline code (code trong dòng) và code block (đoạn code riêng). Inline code dùng ký tự phẩy ngược
+								<pre>The `let` keyword. </pre>
+								... còn code block dùng 3 ký tự phẩy ngược kẹp ở đầu và đuôi của 1 đoạn. Khi bạn muốn cú pháp hiển thị chính xác với ngôn ngữ của đoạn code thì có thể thêm định danh ngôn ngữ ở 3 ký tự phẩy ngược mở đoạnnhư dưới đây.
+<pre>
+```python
+import os
+os.system('clear') 
+```</pre>
+								Ngoài ra nếu cách đầu dòng 4 dấu cách cho 1 đoạn thì đoạn đó cũng sẽ được tự động nhận là một code block. 
+<pre>
+ 	import os
+	os.system('clear') </pre>
+								<h3>Bảng</h3>
+								<hr>
+
+								Vẽ bảng trong Markdown sẽ hơi khó nếu bạn chưa quen. Các cột được tách nhau bằng dấu ngăn thẳng đứng | và header được tách với content bằng dấu gạch ngang -.<br>
+<pre>
+	| Tables        | Are           |    Cool |
+	| --------------|:-------------:|--------:|
+	| col 3 is      | right-aligned |   $1600 |
+	| col 2 is      |    centered   |      $12|
+	| zebra stripes |    are neat   |       $1| </pre>
+								Ở dòng ngăn cách giữa header và content bạn sẽ thấy ký hiệu căn lề trái phải (cột 2 và cột 3) bằng dấu :. Bảng trên sẽ được render thành cấu trúc HTML như dưới đây.
+								<div class="responsive">
+									<table>
+										<thead>
+											<tr>
+												<th>Tables</th>
+												<th>Are</th>
+												<th>Cool</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr >
+												<td >col 3 is</td>
+												<td style="text-align: center;">right-aligned</td>
+												<td style="text-align: right;">$1600</td>
+											</tr>
+											<tr >
+												<td>col 2 is</td>
+												<td style="text-align: center;">centered</td>
+												<td style="text-align: right;">12$</td>
+											</tr>
+											<tr>
+												<td>zebra stripes</td>
+												<td style="text-align: center;">are neat</td>
+												<td style="text-align: right;">$1</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								<!--================== -->
+
+
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
+					</div>
+					<footer>
+						<div class="content">
+
+						</div>
+						<div class="end ">
+							<h6></h6>
+						</div>
+					</footer>
+
+
+
+				</body>
+				</html>

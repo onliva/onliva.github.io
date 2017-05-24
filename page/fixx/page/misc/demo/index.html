@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery.arctic_scroll.js"></script>
+    <script src="js/demo.js" ></script>
+    <script>
+
+</script>
+</head>
+
+<body>
+    <!--overlay-->
+    <div class="w3-overlay" onclick="w3_close()"></div>
+    <a href="#top"  class="w3-button w3-gray w3-border w3-border-black arctic_scroll" style="position: fixed;right: 0;bottom: 1px;border-radius: 5px"><i class="fa fa-chevron-up"></i></a>
+    <header id="top">
+        <nav class=" w3-bar w3-dark-gray w3-card-4 ">
+            <div class="content">
+                <!--LOGO-->
+                <div class="w3-bar-item w3-button ">LOGO/Brand</div>
+
+                <!--mobile button-->
+                <button class="w3-bar-item w3-button w3-xlarge w3-right w3-hide-medium w3-hide-large" onclick="w3_open()">&#9776;</button>
+
+                <!--large menu-->
+                <div class="w3-hide-small hide-medium">
+                    <a href="#" class="w3-bar-item w3-button w3-right">Contact</a>
+                    <a href="#" class="w3-bar-item w3-button w3-right">About</a>
+
+                    <!--DROPDOWN-->
+                    <div class="w3-dropdown-hover w3-right ">
+                        <a class="w3-button ">Product <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <div class="w3-dropdown-content w3-bar-block  ">
+                            <a href="products/products.html" class="w3-bar-item w3-button w3-show-block">All products</a>
+                            <a href="products/product-1.html" class="w3-bar-item w3-button">LINK 1</a>
+                            <a href="products/product-2.html" class="w3-bar-item w3-button">LINK 2</a>
+                            <a href="products/product-3.html" class="w3-bar-item w3-button">LINK 3</a>
+                            <a href="products/product-4.html" class="w3-bar-item w3-button">LINK 4</a>
+                        </div>
+                    </div>
+
+                    <a href="index.html" class="w3-bar-item w3-button w3-right">Home</a>
+                </div>
+            </div>
+        </nav>
+
+        <!--small menu-->
+        <div class="w3-sidebar w3-card w3-animate-right " id="mySidebar" style="right: 0">
+            <div class=" w3-show-block w3-xlarge w3-dark-gray " onclick=" w3_close()" style="text-align: right;"><button class="w3-button">&times;</button></div>
+            <a href="index.html" class="w3-button w3-show-block w3-border-top w3-border-bottom w3-border-green">Home</a>
+
+            <!--DROPDOWN-->
+            <div class="w3-show-block w3-bar-block w3-dropdown-hover">
+                <a class="w3-button w3-bar-item w3-center" style="">Product  <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <div class="w3-dropdown-content w3-bar-block w3-gray">
+                    <a href="products/products.html" class="w3-bar-item w3-button w3-show-block " style="width: 100%">All products</a>
+                    <a href="products/product-1.html" class="w3-bar-item w3-button w3-show-block">LINK 1</a>
+                    <a href="products/product-2.html" class="w3-bar-item w3-button w3-show-block ">LINK 2</a>
+                    <a href="products/product-3.html" class="w3-bar-item w3-button w3-show-block">LINK 3</a>
+                    <a href="products/product-4.html" class="w3-bar-item w3-button w3-show-block">LINK 4</a>
+                </div>
+            </div>
+
+            <a href="../about.html" class="w3-button w3-show-block">About</a>
+            <a href="#" class="w3-button w3-show-block">Contact</a>
+        </div>
+    </header>
+
+    <!-- slide show -->
+    <div class="w3-bar main">
+        <img id="slide" class="" src="img/home-bg1.jpg" alt="picture" >
+        <h1 class=" w3-text-white w3-center text-shadow trans">
+            Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.
+            <br>
+            
+        </h1>
+
+        <p class="w3-container w3-display-left w3-xlarge w3-text-white w3-opacity" style="cursor: pointer;" onclick="prev()">&#10096;</p>
+        <p class="w3-container  w3-display-right w3-xlarge w3-text-white w3-opacity" style="cursor: pointer;" onclick="next()">&#10097;</p>
+    </div>
+
+    <div class="w3-container " id="page">
+        <div class="w3-panel w3-card-4 ">
+            <h1 class="" align="center"> <b class="color1">Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper. Phasellus risus urna, ornare in aliquam id, porttitor sit amet sapien. Nulla facilisi.
+            </h1>
+        </div>
+    </div>
+    <div class="content" >
+        <div class=" w3-row-padding">
+
+            <div class="w3-third w3-panel ">
+                <div class="w3-card  ">
+                    <div class="img-wrap">
+                        <a href="#">
+                            <img class="image-zoom" src="img/home-img1.jpg" style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="w3-container">
+                        Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third w3-panel">
+                <div class="w3-card ">
+                    <div class="img-wrap">
+                        <a href="#">
+                            <img class="image-zoom " src="img/home-img2.jpg" style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="w3-container">
+                        Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-third w3-panel">
+                <div class="w3-card ">
+                    <div class="img-wrap">
+                        <a class="img-wrap" href="#">
+                            <img class="image-zoom " src="img/home-img3.jpg" style="width: 100%;">
+                        </a>
+                    </div>
+                    <div class="w3-container">
+                        Lorem ipsum dolor sit amet,consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.
+                    </div>
+                </div>
+            </div>
+            <!-- test -->
+
+            <!-- test -->
+        </div>
+    </div>
+    
+    <footer class="w3-container w3-black" style="height: 100px" style="margin-top: 100px">
+        <p align=center>this is footer</p>
+    </footer>
+</body>
+
+</html>
