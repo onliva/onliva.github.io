@@ -24,11 +24,7 @@ a {
 .intro {
   position: fixed;
   z-index: 0;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%); }
-
+}
 .about {
   padding: 10px 26px;
   width: 3rem;
