@@ -21,21 +21,21 @@ a {
     // align: center;
     display: block;
 
-    // :before {
-    //   content: "";
-    //   display: block;
-    //   position: fixed;
-    //   left: 0;
-    //   top: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: -10;
-    //   background: url('../img/twilight1.jpg') no-repeat center center;
-    //   -webkit-background-size: cover;
-    //   -moz-background-size: cover;
-    //   -o-background-size: cover;
-    //   background-size: cover;
-    // }
+    :before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background: url('../img/twilight1.jpg') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
     .intro {
         position: fixed;
         z-index: 0;
