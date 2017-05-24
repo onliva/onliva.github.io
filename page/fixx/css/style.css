@@ -6,7 +6,7 @@ a {
   /* The image used */
   background-image: url("../img/twilight1.jpg");
   /* Full height */
-  min-height: 70vh;
+  height: 70vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -424,7 +424,7 @@ blockquote {
     width: 49.9999%;
   }
   .parallax {
-    min-height: 100vh;
+    height: 100vh;
   }
   .col-8 {
     width: 66%;
