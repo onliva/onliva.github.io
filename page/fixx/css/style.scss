@@ -18,29 +18,54 @@ a {
     // align-items: center;
     //align: center;
     display: block;
-}
 
-.intro {
-    position: fixed;
-    z-index: 0;
-    margin-left: 50%;
-    transform: translateX(-50%)
-}
 
-.about {
-    padding: 10px 26px;
-    width: 3rem;
-    height: 1rem;
-    color: white;
-    font-size: 12px;
-    box-shadow: 0 0 1px 1px white;
-    border-radius: 10px;
-    cursor: pointer;
-    background: rgba(128, 128, 128, 0.3);
-}
+    .intro {
+        position: fixed;
+        z-index: 0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        display: table;
+        .dp-container {
+            position: relative;
+            height: 100vh;
+            //display: flex;
+            //align-items: center;
+            display: table-cell;
+            vertical-align: middle;
+            .dp-middle {
+                position: absolute;
+                top: 50vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+            .dp-bottom {
+                position: absolute;
+                left: 50%;
+                bottom: 10px;
+                transform: translate(-50%, 0%)!important;
+                -ms-transform: translate(-50%, 0%)!important;
+            }
+        }
+    }
 
-.about:hover {
-    box-shadow: 0 0 8px 2px white;
+    .about {
+        padding: 10px 26px;
+        width: 3rem;
+        height: 1rem;
+        color: white;
+        font-size: 12px;
+        box-shadow: 0 0 1px 1px white;
+        border-radius: 10px;
+        cursor: pointer;
+        background: rgba(128, 128, 128, 0.3);
+        :hover {
+            box-shadow: 0 0 8px 2px white;
+        }
+    }
+
+
 }
 
 .social {
@@ -53,11 +78,10 @@ a {
     border-radius: 0 0 0 50px;
     background: black;
     font-size: 1.5rem;
-}
-
-.social .fa {
-    margin: 4px;
-    color: white;
+    .fa {
+        margin: 4px;
+        color: white;
+    }
 }
 
 .site h1,
@@ -99,29 +123,6 @@ a {
 
 .inline-block {
     display: inline-block;
-}
-
-.dp-container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.dp-middle {
-    position: absolute;
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.dp-bottom {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translate(-50%, 0%)!important;
-    -ms-transform: translate(-50%, 0%)!important;
 }
 
 .link {
@@ -358,7 +359,7 @@ footer {
 footer .end {
     height: 50px;
     background: black;
-    display: flex;
+    //display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -392,12 +393,13 @@ footer .end {
 }
 
 .btn-top {
-    bottom: 20px;
+    bottom: 10px;
     cursor: pointer;
     display: none;
     position: fixed;
-    right: 20px;
+    right: 10px;
     z-index: 9999;
+    color: #191970;
 }
 blockquote{
     border-left: 5px solid dimgray;

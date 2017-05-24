@@ -15,16 +15,42 @@ a {
   display: block;
 }
 
-.intro {
+.parallax .intro {
   position: fixed;
   z-index: 0;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  display: table;
 }
 
-.about {
+.parallax .intro .dp-container {
+  position: relative;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.parallax .intro .dp-container .dp-middle {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.parallax .intro .dp-container .dp-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translate(-50%, 0%) !important;
+  transform: translate(-50%, 0%) !important;
+  -ms-transform: translate(-50%, 0%) !important;
+}
+
+.parallax .about {
   padding: 10px 26px;
   width: 3rem;
   height: 1rem;
@@ -36,7 +62,7 @@ a {
   background: rgba(128, 128, 128, 0.3);
 }
 
-.about:hover {
+.parallax .about :hover {
   box-shadow: 0 0 8px 2px white;
 }
 
@@ -96,35 +122,6 @@ a {
 
 .inline-block {
   display: inline-block;
-}
-
-.dp-container {
-  position: relative;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.dp-middle {
-  position: absolute;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-.dp-bottom {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  -webkit-transform: translate(-50%, 0%) !important;
-  transform: translate(-50%, 0%) !important;
-  -ms-transform: translate(-50%, 0%) !important;
 }
 
 .link {
@@ -362,9 +359,6 @@ footer {
 footer .end {
   height: 50px;
   background: black;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -398,12 +392,13 @@ footer .end {
 }
 
 .btn-top {
-  bottom: 20px;
+  bottom: 10px;
   cursor: pointer;
   display: none;
   position: fixed;
-  right: 20px;
+  right: 10px;
   z-index: 9999;
+  color: #191970;
 }
 
 blockquote {
