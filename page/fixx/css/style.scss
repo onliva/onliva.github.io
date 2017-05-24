@@ -129,6 +129,7 @@ a {
     text-decoration: none;
     color: white;
     text-shadow: 0 0 1px black;
+    padding-top: 12px;
 }
 
 .link:hover {
@@ -156,22 +157,20 @@ a {
 .nav {
     position: relative;
     width: 100%;
-    padding: 12px 4px;
+    //padding: 12px 4px;
     box-sizing: border-box;
     background: black;
     /* font-size: 1.5rem; */
     z-index: 1;
+    a {
+        padding-left: 2rem;
+    }
 }
 
 .nav-fixed {
     position: fixed;
     top: 0;
 }
-
-.nav a {
-    margin-left: 2rem;
-}
-
 .show-mobile {
     display: block;
 }
@@ -185,6 +184,12 @@ a {
     background-color: black;
     display: none;
     border-top: 1px solid gray;
+    a {
+        display: block;
+    }
+    center:last-child {
+        padding-bottom: 12px;
+    }
 }
 
 .nav-mb-show {
@@ -195,20 +200,14 @@ a {
     z-index: 10;
 }
 
-.nav-mobile a {
-    /* position: fixed; */
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
+
 
 .btn {
     border: none;
     display: inline-block;
     outline: 0;
     cursor: pointer;
-    padding: 0 16px;
+    padding: 12px 16px;
     overflow: hidden;
     text-decoration: none;
 }
@@ -399,7 +398,7 @@ footer .end {
     position: fixed;
     right: 10px;
     z-index: 9999;
-    color: #191970;
+    color: #400000;
 }
 blockquote{
     border-left: 5px solid dimgray;
