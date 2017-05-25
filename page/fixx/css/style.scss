@@ -1,13 +1,19 @@
+body, html {
+  height: 100%;
+  position: relative;
+}
 
 a {
     text-decoration: none;
 }
-
+header{
+    height: 80%
+}
 .parallax {
     /* The image used */
     background-image: url('../img/twilight1.jpg');
     /* Full height */
-    height: 70vh;
+    height: 100%;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -416,8 +422,11 @@ blockquote{
     .half {
         width: 49.9999%;
     }
+    header {
+        height: 100%;
+    }
     .parallax {
-        height: 99vh;
+        height: 99%;
     }
     .col-8 {
         width: 66%
