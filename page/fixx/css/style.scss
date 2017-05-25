@@ -14,13 +14,9 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 
-
-    // display: flex ;
-    // justify-content: center;
-    // align-items: center;
-    // align: center;
     display: block;
     border: solid red;
+    background-color:blue;
 
     .intro {
     position: fixed;
@@ -31,8 +27,7 @@ a {
     .dp-container {
         position: relative;
         height: 100vh;
-            //display: flex;
-            //align-items: center;
+            
             display: table-cell;
             vertical-align: middle;
             .dp-middle {
@@ -40,14 +35,12 @@ a {
                 top: 50vh;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
             }
             .dp-bottom {
                 position: absolute;
                 left: 50%;
                 bottom: 10px;
-                transform: translate(-50%, 0%)!important;
-                -ms-transform: translate(-50%, 0%)!important;
+                transform: translate(-50%, 0%);
             }
         }
     }

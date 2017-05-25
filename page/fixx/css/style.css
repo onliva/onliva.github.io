@@ -11,10 +11,10 @@ a {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   display: block;
   border: solid red;
+  background-color: blue;
 }
 
 .parallax .intro {
@@ -39,17 +39,17 @@ a {
   top: 50vh;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .parallax .intro .dp-container .dp-bottom {
   position: absolute;
   left: 50%;
   bottom: 10px;
-  -webkit-transform: translate(-50%, 0%) !important;
-  transform: translate(-50%, 0%) !important;
-  -ms-transform: translate(-50%, 0%) !important;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 .parallax .about {
