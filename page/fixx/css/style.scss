@@ -20,31 +20,17 @@ a {
     // align-items: center;
     // align: center;
     display: block;
+    border: solid red;
 
-    :before {
-      content: "";
-      display: block;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -10;
-      background: url('../img/twilight1.jpg') no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
     .intro {
-        position: fixed;
-        z-index: 0;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        display: table;
-        .dp-container {
-            position: relative;
-            height: 100vh;
+    position: fixed;
+    z-index: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: table;
+    .dp-container {
+        position: relative;
+        height: 100vh;
             //display: flex;
             //align-items: center;
             display: table-cell;
@@ -245,6 +231,8 @@ a {
 .card {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3), 0 0 8px rgba(128, 128, 128, 0.3);
     margin: 8px;
+    min-height: 230px;
+    overflow: hidden;
 }
 
 .card-img-top {
@@ -436,7 +424,7 @@ blockquote{
         width: 49.9999%;
     }
     .parallax {
-        height: 100vh;
+        height: 99vh;
     }
     .col-8 {
         width: 66%
