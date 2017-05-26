@@ -12,7 +12,7 @@ header{
     /* The image used */
     background-image: url('../img/twilight1.jpg');
     /* Full height */
-    height: 100%;
+    height: 70vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -422,7 +422,9 @@ blockquote{
     header {
         height: 100%;
     }
-
+    .parallax{
+        height: 100vh;
+    }
     .col-8 {
         width: 66%
     }
