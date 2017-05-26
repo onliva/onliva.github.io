@@ -22,8 +22,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
-  border: solid red;
-  background-color: blue;
 }
 
 .parallax .intro {
@@ -438,9 +436,6 @@ blockquote {
   }
   header {
     height: 100%;
-  }
-  .parallax {
-    height: 99%;
   }
   .col-8 {
     width: 66%;
