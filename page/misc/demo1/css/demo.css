@@ -1,0 +1,131 @@
+body {
+    background: lightgray;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+}
+
+nav.w3-bar {
+    overflow: visible;
+    box-shadow: 0 0 4px #5f5f5f;
+}
+
+.main {
+    position: relative;
+    /* Full height */
+    height: 90vh; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    width: 100vw;
+    height: 100%;
+    border: solid;
+    overflow: hidden;
+}
+
+.text-shadow {
+    text-shadow: 0 0 10px black;
+}
+
+.color1 {
+    color: #a0294c
+}
+
+.trans {
+    /*bottom text in slide show*/
+    position: absolute;
+    bottom: 5px;
+    font-size: 200%;
+}
+
+#mySidebar {
+    z-index: 2;
+    display: none;
+    width: 40%;
+}
+
+#mySidebar.w3-button {
+    display: block;
+}
+
+.overlay {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.flex-box-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-half {
+    flex-basis: 100vw;
+}
+
+.flex-box-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .flex-haft {
+        flex-basis: 100vw;
+    }
+    .flex-box-row,
+    .flex-box-column {
+        display: block
+    }
+    .content {
+        margin: 0 16px;
+    }
+}
+
+.w3-dropdown-hover:hover .fade {
+    opacity: 0.3;
+}
+
+.tile.is-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: 41.66667%;
+}
+
+.adjus {
+    /* adjust button1 onproducs.php */
+    transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.img-wrap {
+    overflow: hidden;
+}
+.img-wrap img {
+    display: block;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+.img-wrap:hover img {
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+}
+
+
+
+
+/* ===================================================== */
+
