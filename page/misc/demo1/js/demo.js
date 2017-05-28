@@ -35,7 +35,10 @@ window.onload = function () {
         slide.src = wallpaper[img];
     }
     // nav menu
-    function w3_open() {
+    
+
+};
+function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
         document.getElementsByClassName("w3-overlay")[0].style.display = "block";
     }
@@ -44,5 +47,3 @@ window.onload = function () {
         document.getElementById("mySidebar").style.display = "none";
         document.getElementsByClassName("w3-overlay")[0].style.display = "none";
     }
-
-};
