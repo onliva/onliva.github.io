@@ -1,6 +1,6 @@
 // slide show
 
-window.onload = function () {
+//window.onload = function () {
     'use strict';
     var slide = document.getElementById("slide"),
         wallpaper,
@@ -45,4 +45,4 @@ window.onload = function () {
         document.getElementsByClassName("w3-overlay")[0].style.display = "none";
     }
 
-};
+//};
